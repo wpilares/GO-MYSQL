@@ -1,23 +1,37 @@
 package main
 
 import (
-	"fmt"
 	"sqlgo/db"
-	"sqlgo/models"
 )
 
 func main() {
 	db.Connect()
 	db.Health()
-	//fmt.Println(db.ExistTable("users"))
+
 	//db.CreateTable(models.UserSchema, "users")
-	user := models.CreateUser("Kevin", "Kevin123", "kevin@gmail.com")
-	fmt.Println(user)
+
+	//Restore Table
 	//db.TruncateTable("users")
+
+	//user := models.CreateUser("Kevin", "Kevin123", "kevin@gmail.com")
+	//fmt.Println(user)
+
 	//users := models.ListUsers()
 	//fmt.Println(users)
-	//db.TruncateTable("users")
-	//fmt.Println(models.ListUsers())
+
+	//user := models.GetUser(1)
+	//fmt.Println(user)
+
+	//Update User
+	//user := models.GetUser(1)
+	//fmt.Println(user)
+	//user.Username="Ruben"
+	//user.Save()
+
+	//Delete User
+	//user := models.GetUser(1)
+	//fmt.Println(user)
+	//user.Delete()
 
 	db.Disconnect()
 }
