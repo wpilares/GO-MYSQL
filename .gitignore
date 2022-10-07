@@ -1,4 +1,4 @@
 .env
 dockerfile
 mysql
-/.idea/*
+/*.idea/*
